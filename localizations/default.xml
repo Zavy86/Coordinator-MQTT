@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<locale>
+
+ <!-- mqtt -->
+ <text key="mqtt">MQTT</text>
+ <text key="mqtt-description">Interfaccia MQTT</text>
+
+ <!-- authorizations -->
+ <text key="mqtt-manage">Gestione impostazioni</text>
+ <text key="mqtt-manage-description">Gestione delle impostazioni</text>
+ <text key="mqtt-logs">Visualizzazione logs</text>
+ <text key="mqtt-logs-description">Visualizzazione dei logs</text>
+
+ <!-- alerts -->
+ <text key="mqtt_alert-settingsError">Si è verificato un errore durante il salvataggio delle impostazioni</text>
+ <text key="mqtt_alert-settingsUpdated">Le impostazioni sono state aggiornate</text>
+
+ <!-- navigation -->
+ <text key="nav-operations">Operazioni</text>
+ <text key="nav-settings-edit">MQTT</text>
+
+ <!-- dashboard -->
+ <text key="dashboard-logs-list">Eventi</text>
+ <text key="dashboard-logs-list-description">Elenco degli eventi registrati</text>
+ <text key="dashboard-settings-edit">Impostazioni</text>
+ <text key="dashboard-settings-edit-description">Gestione delle impostazioni MQTT</text>
+
+ <!-- logs_list -->
+ <text key="logs_list">Eventi</text>
+ <text key="logs_list-tr-unvalued">Non sono presenti eventi da mostrare..</text>
+ <text key="logs_list-th-timestamp">Timestamp</text>
+ <text key="logs_list-th-topic">Topic</text>
+ <text key="logs_list-th-payload">Payload</text>
+ <text key="logs_list-th-client">Client</text>
+ <text key="logs_list-td-view">Visualizza</text>
+ <text key="logs_view_logs_modal-title">MQTT Log #<![CDATA[{0}]]></text>
+ <text key="logs_view_logs_modal-dt-topic">Topic</text>
+ <text key="logs_view_logs_modal-dt-payload">Payload</text>
+ <text key="logs_view_logs_modal-dt-timestamp">Timestamp</text>
+ <text key="logs_view_logs_modal-dt-client">Client</text>
+ <text key="logs_view_logs_modal-dt-ip">IP Address</text>
+
+ <!-- settings_edit -->
+ <text key="settings_edit">Impostazioni</text>
+ <text key="settings_edit-tab-generals">Generali</text>
+ <text key="settings_edit-tab-tokens">Tokens</text>
+ <text key="settings_edit-ff-engine">Sistema</text>
+ <text key="settings_edit-fo-engine-enabled">Abilitato</text>
+ <text key="settings_edit-fo-engine-disabled">Disabilitato</text>
+ <text key="settings_edit-ff-hostname">Server</text>
+ <text key="settings_edit-ff-hostname-placeholder">Nome host o Indirizzo IP del server MQTT</text>
+ <text key="settings_edit-ff-hostport">Porta</text>
+ <text key="settings_edit-ff-hostport-placeholder">Porta di connessione (default: 1883)</text>
+ <text key="settings_edit-ff-username">Nome utente</text>
+ <text key="settings_edit-ff-username-placeholder">Nome utente per l'autenticazione (facoltativo)</text>
+ <text key="settings_edit-ff-password">Password</text>
+ <text key="settings_edit-ff-password-placeholder">Password (solo in caso di modifica)</text>
+ <text key="settings_edit-ff-token">Token</text>
+ <text key="settings_edit-ff-token-placeholder">Token per l'utilizzo del webservice</text>
+ <text key="settings_edit-ff-token-randomize">Rigenera</text>
+
+</locale>
