@@ -9,17 +9,18 @@
 
 // include classes
 require_once(ROOT."modules/mqtt/classes/cMqttSettings.class.php");
+require_once(ROOT."modules/mqtt/classes/cMqttLog.class.php");
 
 
 /**
  * MQTT - Log
  *
  * @param type $topic Topic
- * @param type $message Message
+ * @param type $payload Payload
  * @param type $client Client
  * @return boolean
  */
-function api_mqtt_log($topic,$message=null,$client=null){
+function api_mqtt_log($topic,$payload=null,$client=null){
  // check parameters
  if(!$topic){return false;}
  // get remote ip address
@@ -29,7 +30,7 @@ function api_mqtt_log($topic,$message=null,$client=null){
  $log_qobj=new stdClass();
  $log_qobj->timestamp=time();
  $log_qobj->topic=$topic;
- $log_qobj->message=$message;
+ $log_qobj->payload=$payload;
  $log_qobj->client=$client;
  $log_qobj->ip=$ip;
  // debug

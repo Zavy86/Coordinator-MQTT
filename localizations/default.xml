@@ -9,6 +9,8 @@
  <!-- authorizations -->
  <text key="mqtt-manage">Gestione impostazioni</text>
  <text key="mqtt-manage-description">Gestione delle impostazioni</text>
+ <text key="mqtt-logs">Visualizzazione logs</text>
+ <text key="mqtt-logs-description">Visualizzazione dei logs</text>
 
  <!-- alerts -->
  <text key="mqtt_alert-settingsError">Si è verificato un errore durante il salvataggio delle impostazioni</text>
@@ -19,8 +21,25 @@
  <text key="nav-settings-edit">MQTT</text>
 
  <!-- dashboard -->
+ <text key="dashboard-logs-list">Eventi</text>
+ <text key="dashboard-logs-list-description">Elenco degli eventi registrati</text>
  <text key="dashboard-settings-edit">Impostazioni</text>
  <text key="dashboard-settings-edit-description">Gestione delle impostazioni MQTT</text>
+
+ <!-- logs_list -->
+ <text key="logs_list">Eventi</text>
+ <text key="logs_list-tr-unvalued">Non sono presenti eventi da mostrare..</text>
+ <text key="logs_list-th-timestamp">Timestamp</text>
+ <text key="logs_list-th-topic">Topic</text>
+ <text key="logs_list-th-payload">Payload</text>
+ <text key="logs_list-th-client">Client</text>
+ <text key="logs_list-td-view">Visualizza</text>
+ <text key="logs_view_logs_modal-title">MQTT Log #<![CDATA[{0}]]></text>
+ <text key="logs_view_logs_modal-dt-topic">Topic</text>
+ <text key="logs_view_logs_modal-dt-payload">Payload</text>
+ <text key="logs_view_logs_modal-dt-timestamp">Timestamp</text>
+ <text key="logs_view_logs_modal-dt-client">Client</text>
+ <text key="logs_view_logs_modal-dt-ip">IP Address</text>
 
  <!-- settings_edit -->
  <text key="settings_edit">Impostazioni</text>

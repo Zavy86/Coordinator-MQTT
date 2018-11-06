@@ -31,7 +31,7 @@ CREATE TABLE IF NOT EXISTS `mqtt__logs` (
   `id` int(11) unsigned NOT NULL AUTO_INCREMENT,
   `timestamp` int(11) unsigned NOT NULL,
   `topic` varchar(256) COLLATE utf8_unicode_ci NOT NULL,
-  `message` text COLLATE utf8_unicode_ci NOT NULL,
+  `payload` text COLLATE utf8_unicode_ci NOT NULL,
   `client` varchar(256) COLLATE utf8_unicode_ci DEFAULT NULL,
   `ip` varchar(16) COLLATE utf8_unicode_ci DEFAULT NULL,
   PRIMARY KEY (`id`)
@@ -44,6 +44,7 @@ CREATE TABLE IF NOT EXISTS `mqtt__logs` (
 --
 
 INSERT INTO `framework__modules_authorizations` (`id`,`module`,`action`) VALUES
-(NULL,'mqtt','mqtt-manage');
+(NULL,'mqtt','mqtt-manage'),
+(NULL,'mqtt','mqtt-logs');
 
 -- --------------------------------------------------------

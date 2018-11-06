@@ -12,6 +12,7 @@
  $html->setTitle(api_text("mqtt"));
  // build dashboard object
  $dashboard=new cDashboard();
+ $dashboard->addTile("?mod=mqtt&scr=logs_list",api_text("dashboard-logs-list"),api_text("dashboard-logs-list-description"),(api_checkAuthorization(MODULE,"mqtt-logs")),"1x1","fa-book");
  $dashboard->addTile("?mod=mqtt&scr=settings_edit",api_text("dashboard-settings-edit"),api_text("dashboard-settings-edit-description"),(api_checkAuthorization(MODULE,"mqtt-manage")),"1x1","fa-toggle-on");
  // build grid object
  $grid=new cGrid();
