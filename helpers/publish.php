@@ -1,5 +1,5 @@
 <?php
-
+/*
 require("../phpMQTT.php");
 
 $server = "mqtt.example.com";     // change if necessary
@@ -16,3 +16,5 @@ if ($mqtt->connect(true, NULL, $username, $password)) {
 } else {
     echo "Time out!\n";
 }
+*/
+?>

@@ -2,8 +2,43 @@
 
 <locale>
 
- <!-- test -->
- <text key="test">Test</text>
- <text key="test-description">Test module</text>
+ <!-- mqtt -->
+ <text key="mqtt">MQTT</text>
+ <text key="mqtt-description">Interfaccia MQTT</text>
+
+ <!-- authorizations -->
+ <text key="mqtt-manage">Gestione impostazioni</text>
+ <text key="mqtt-manage-description">Gestione delle impostazioni</text>
+
+ <!-- alerts -->
+ <text key="mqtt_alert-settingsError">Si è verificato un errore durante il salvataggio delle impostazioni</text>
+ <text key="mqtt_alert-settingsUpdated">Le impostazioni sono state aggiornate</text>
+
+ <!-- navigation -->
+ <text key="nav-operations">Operazioni</text>
+ <text key="nav-settings-edit">MQTT</text>
+
+ <!-- dashboard -->
+ <text key="dashboard-settings-edit">Impostazioni</text>
+ <text key="dashboard-settings-edit-description">Gestione delle impostazioni MQTT</text>
+
+ <!-- settings_edit -->
+ <text key="settings_edit">Impostazioni</text>
+ <text key="settings_edit-tab-generals">Generali</text>
+ <text key="settings_edit-tab-tokens">Tokens</text>
+ <text key="settings_edit-ff-engine">Sistema</text>
+ <text key="settings_edit-fo-engine-enabled">Abilitato</text>
+ <text key="settings_edit-fo-engine-disabled">Disabilitato</text>
+ <text key="settings_edit-ff-hostname">Server</text>
+ <text key="settings_edit-ff-hostname-placeholder">Nome host o Indirizzo IP del server MQTT</text>
+ <text key="settings_edit-ff-hostport">Porta</text>
+ <text key="settings_edit-ff-hostport-placeholder">Porta di connessione (default: 1883)</text>
+ <text key="settings_edit-ff-username">Nome utente</text>
+ <text key="settings_edit-ff-username-placeholder">Nome utente per l'autenticazione (facoltativo)</text>
+ <text key="settings_edit-ff-password">Password</text>
+ <text key="settings_edit-ff-password-placeholder">Password (solo in caso di modifica)</text>
+ <text key="settings_edit-ff-token">Token</text>
+ <text key="settings_edit-ff-token-placeholder">Token per l'utilizzo del webservice</text>
+ <text key="settings_edit-ff-token-randomize">Rigenera</text>
 
 </locale>

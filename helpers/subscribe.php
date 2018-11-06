@@ -1,5 +1,5 @@
 <?php
-
+/*
 require("../phpMQTT.php");
 
 
@@ -30,3 +30,5 @@ function procmsg($topic, $msg){
 		echo "Topic: {$topic}\n\n";
 		echo "\t$msg\n\n";
 }
+*/
+?>
