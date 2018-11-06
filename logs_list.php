@@ -61,7 +61,6 @@
   // jQuery scripts
   $html->addScript("/* Modal window opener */\n$(function(){\$('#modal_logs_view_logs').modal('show');});");
  }
-
  // build grid object
  $grid=new cGrid();
  $grid->addRow();
