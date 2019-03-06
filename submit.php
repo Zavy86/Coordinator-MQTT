@@ -12,6 +12,8 @@ if(!defined('ACTION')){die("ERROR EXECUTING SCRIPT: The action was not defined")
 switch(ACTION){
  // settings
  case "settings_save":settings_save();break;
+ // message send
+ case "message_send":message_send();break;
  // default
  default:
   api_alerts_add(api_text("alert_submitFunctionNotFound",array(MODULE,SCRIPT,ACTION)),"danger");
@@ -24,6 +26,8 @@ switch(ACTION){
 function settings_save(){
  // debug
  api_dump($_REQUEST);
+ // check authorizations
+ api_checkAuthorization("mqtt-manage","dashboard");
  // acquire variables
  $r_tab=$_REQUEST['tab'];
  // definitions
@@ -50,7 +54,28 @@ function settings_save(){
  }
  // redirect
  api_alerts_add(api_text("mqtt_alert-settingsUpdated"),"success");
- api_redirect("?mod=mqtt&scr=settings_edit&tab=".$r_tab);
+ api_redirect("?mod=".MODULE."&scr=settings_edit&tab=".$r_tab);
+}
+
+/**
+ * Message Send
+ */
+function message_send(){
+ // debug
+ api_dump($_REQUEST);
+ // check authorizations
+ api_checkAuthorization("mqtt-send","dashboard");
+ // acquire variables
+ $r_topic=$_REQUEST['topic'];
+ $r_payload=$_REQUEST['payload'];
+ $r_retain=$_REQUEST['retain'];
+ // publish to mqtt
+ $return=mqtt_publish($r_topic,$r_payload,($r_retain?true:false));
+ // check
+ if($return){api_alerts_add(api_text("mqtt_alert-messageSend"),"success");}
+ else{api_alerts_add(api_text("mqtt_alert-messageError"),"success");}
+ // redirect
+ api_redirect("?mod=".MODULE."&scr=messages_list");
 }
 
 ?>

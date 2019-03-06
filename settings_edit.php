@@ -1,12 +1,12 @@
 <?php
 /**
- * Settings - Settings
+ * MQTT - Settings
  *
- * @package Coordinator\Modules\Settings
+ * @package Coordinator\Modules\MQTT
  * @author  Manuel Zavatta <manuel.zavatta@gmail.com>
  * @link    http://www.zavynet.org
  */
- $authorization="mqtt-manage";
+ api_checkAuthorization("mqtt-manage","dashboard");
  // get object
  $settings_obj=new cMqttSettings();
  // check actions
@@ -19,10 +19,10 @@
  if(!defined(TAB)){define("TAB","generals");}
  // script tabs
  $tabs=new cNav("nav-pills");
- $tabs->addItem(api_text("settings_edit-tab-generals"),"?mod=mqtt&scr=settings_edit&tab=generals");
- $tabs->addItem(api_text("settings_edit-tab-tokens"),"?mod=mqtt&scr=settings_edit&tab=tokens");
+ $tabs->addItem(api_text("settings_edit-tab-generals"),"?mod=".MODULE."&scr=settings_edit&tab=generals");
+ $tabs->addItem(api_text("settings_edit-tab-tokens"),"?mod=".MODULE."&scr=settings_edit&tab=tokens");
  // build settings form
- $form=new cForm("?mod=mqtt&scr=submit&act=settings_save&tab=".TAB,"POST",null,"settings_edit");
+ $form=new cForm("?mod=".MODULE."&scr=submit&act=settings_save&tab=".TAB,"POST",null,"settings_edit");
  /**
   * Generals
   */
@@ -41,12 +41,12 @@
   */
  if(TAB=="tokens"){
   $form->addField("text","token",api_text("settings_edit-ff-token"),$settings_obj->token,api_text("settings_edit-ff-token-placeholder"));
-  $form->addFieldAddonButton("?mod=mqtt&scr=settings_edit&tab=tokens&act=token_randomize",api_text("settings_edit-ff-token-randomize"));
+  $form->addFieldAddonButton("?mod=".MODULE."&scr=settings_edit&tab=tokens&act=token_randomize",api_text("settings_edit-ff-token-randomize"));
  }
  // form controls
  $form->addControl("submit",api_text("form-fc-submit"));
  $form->addControl("reset",api_text("form-fc-reset"));
- $form->addControl("button",api_text("form-fc-cancel"),"?mod=mqtt&scr=dashboard");
+ $form->addControl("button",api_text("form-fc-cancel"),"?mod=".MODULE."&scr=dashboard");
  // build grid object
  $grid=new cGrid();
  $grid->addRow();

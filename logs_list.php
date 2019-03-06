@@ -6,7 +6,7 @@
  * @author  Manuel Zavatta <manuel.zavatta@gmail.com>
  * @link    http://www.zavynet.org
  */
- $authorization="mqtt-logs";
+ api_checkAuthorization("mqtt-logs","dashboard");
  // include module template
  require_once(MODULE_PATH."template.inc.php");
  // definitions
@@ -36,7 +36,7 @@
   if($log_obj->id==$_REQUEST['idLog']){$tr_class="info";}else{$tr_class=null;}
   // make log row
   $table->addRow($tr_class);
-  $table->addRowField(api_link("?mod=mqtt&scr=logs_list&act=log_view&idLog=".$log_obj->id,api_icon("fa-search",null,"hidden-link"),api_text("logs_list-td-view")));
+  $table->addRowField(api_link("?mod=".MODULE."&scr=logs_list&act=log_view&idLog=".$log_obj->id,api_icon("fa-search",null,"hidden-link"),api_text("logs_list-td-view")));
   $table->addRowField(api_timestamp_format($log_obj->timestamp,api_text("datetime")),"nowrap");
   $table->addRowField($log_obj->topic,"nowrap");
   $table->addRowField($log_obj->payload,"truncate-ellipsis");
