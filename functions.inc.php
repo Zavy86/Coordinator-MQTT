@@ -11,7 +11,6 @@
 require_once(ROOT."modules/mqtt/classes/cMqttSettings.class.php");
 require_once(ROOT."modules/mqtt/classes/cMqttLog.class.php");
 
-
 /**
  * MQTT - Log
  *
@@ -41,7 +40,6 @@ function api_mqtt_log($topic,$payload=null,$client=null){
  if($log_qobj->id){return true;}
  else{return false;}
 }
-
 
 /**
  * MQTT - Publish

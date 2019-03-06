@@ -18,11 +18,15 @@
 
  <!-- navigation -->
  <text key="nav-operations">Operazioni</text>
- <text key="nav-settings-edit">MQTT</text>
+ <text key="nav-logs-list">Eventi</text>
+ <text key="nav-messages-send">Invio</text>
+ <text key="nav-settings-edit">Impostazioni</text>
 
  <!-- dashboard -->
  <text key="dashboard-logs-list">Eventi</text>
  <text key="dashboard-logs-list-description">Elenco degli eventi registrati</text>
+ <text key="dashboard-messages-send">Invio</text>
+ <text key="dashboard-messages-send-description">Invia un messaggio</text>
  <text key="dashboard-settings-edit">Impostazioni</text>
  <text key="dashboard-settings-edit-description">Gestione delle impostazioni MQTT</text>
 
@@ -40,6 +44,14 @@
  <text key="logs_view_logs_modal-dt-timestamp">Timestamp</text>
  <text key="logs_view_logs_modal-dt-client">Client</text>
  <text key="logs_view_logs_modal-dt-ip">IP Address</text>
+
+ <!-- messages_send -->
+ <text key="messages_send">Invio</text>
+ <text key="messages_send-ff-topic">Topic</text>
+ <text key="messages_send-ff-topic-placeholder">Topic for payload</text>
+ <text key="messages_send-ff-payload">Payload</text>
+ <text key="messages_send-ff-payload-placeholder">Payload content</text>
+ <text key="messages_send-fo-retain">Retain message</text>
 
  <!-- settings_edit -->
  <text key="settings_edit">Impostazioni</text>
