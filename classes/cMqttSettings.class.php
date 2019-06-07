@@ -4,7 +4,7 @@
  *
  * @package Coordinator\Modules\MQTT
  * @author  Manuel Zavatta <manuel.zavatta@gmail.com>
- * @link    http://www.zavynet.org
+ * @link    http://www.coordinator.it
  */
 
 /**
@@ -31,7 +31,7 @@ class cMqttSettings{
   // definitions
   $this->settings_array=array();
   // get settings and build object
-  $settings_results=$GLOBALS['database']->queryObjects("SELECT * FROM `mqtt__settings` ORDER BY `setting` ASC",$GLOBALS['debug']);
+  $settings_results=$GLOBALS['database']->queryObjects("SELECT * FROM `mqtt__settings` ORDER BY `setting` ASC");
   foreach($settings_results as $setting){$this->settings_array[$setting->setting]=$setting->value;}
   // return
   return true;

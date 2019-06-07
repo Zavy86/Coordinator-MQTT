@@ -4,7 +4,7 @@
  *
  * @package Coordinator\Modules\MQTT
  * @author  Manuel Zavatta <manuel.zavatta@gmail.com>
- * @link    http://www.zavynet.org
+ * @link    http://www.coordinator.it
  */
 
 /**
@@ -35,7 +35,7 @@ class cMqttLog{
   */
  public function __construct($log){
   // get object
-  if(is_numeric($log)){$log=$GLOBALS['database']->queryUniqueObject("SELECT * FROM `mqtt__logs` WHERE `id`='".$log."'",$GLOBALS['debug']);}
+  if(is_numeric($log)){$log=$GLOBALS['database']->queryUniqueObject("SELECT * FROM `mqtt__logs` WHERE `id`='".$log."'");}
   if(!$log->id){return false;}
   // set properties
   $this->id=(int)$log->id;

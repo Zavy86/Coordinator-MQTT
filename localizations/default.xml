@@ -1,5 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-
+<!-->
+ ! Default localization
+ !
+ ! @package Coordinator\Modules\MQTT
+ ! @author  Manuel Zavatta <manuel.zavatta@gmail.com>
+ ! @link    http://www.coordinator.it
+ !
+<!-->
 <locale>
 
  <!-- mqtt -->
@@ -7,10 +14,12 @@
  <text key="mqtt-description">Interfaccia MQTT</text>
 
  <!-- authorizations -->
- <text key="mqtt-manage">Gestione impostazioni</text>
+ <text key="mqtt-manage">Gestione</text>
  <text key="mqtt-manage-description">Gestione delle impostazioni</text>
- <text key="mqtt-logs">Visualizzazione logs</text>
+ <text key="mqtt-logs">Logs</text>
  <text key="mqtt-logs-description">Visualizzazione dei logs</text>
+ <text key="mqtt-send">Invio</text>
+ <text key="mqtt-send-description">Invio di comandi o messaggi</text>
 
  <!-- alerts -->
  <text key="mqtt_alert-settingsError">Si è verificato un errore durante il salvataggio delle impostazioni</text>

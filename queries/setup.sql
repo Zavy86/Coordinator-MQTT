@@ -44,9 +44,9 @@ CREATE TABLE IF NOT EXISTS `mqtt__logs` (
 -- Authorizations
 --
 
-INSERT INTO `framework__modules_authorizations` (`id`,`module`,`action`) VALUES
-(NULL,'mqtt','mqtt-manage'),
-(NULL,'mqtt','mqtt-logs');
+INSERT IGNORE INTO `framework__modules__authorizations` (`id`,`fkModule`,`order`) VALUES
+('mqtt-manage','mqtt',1),
+('mqtt-logs','mqtt',2);
 
 -- --------------------------------------------------------
 

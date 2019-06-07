@@ -4,7 +4,7 @@
  *
  * @package Coordinator\Modules\MQTT
  * @author  Manuel Zavatta <manuel.zavatta@gmail.com>
- * @link    http://www.zavynet.org
+ * @link    http://www.coordinator.it
  */
  api_checkAuthorization("mqtt-manage","dashboard");
  // get object
@@ -13,16 +13,16 @@
  if(ACTION=="token_randomize"||!$settings_obj->token){$settings_obj->token=md5(date("YmdHis").rand(1,99999));}
  // include module template
  require_once(MODULE_PATH."template.inc.php");
- // set html title
- $html->setTitle(api_text("settings_edit"));
+ // set application title
+ $app->setTitle(api_text("settings_edit"));
  // check for tab
  if(!defined(TAB)){define("TAB","generals");}
  // script tabs
- $tabs=new cNav("nav-pills");
+ $tabs=new strNav("nav-pills");
  $tabs->addItem(api_text("settings_edit-tab-generals"),"?mod=".MODULE."&scr=settings_edit&tab=generals");
  $tabs->addItem(api_text("settings_edit-tab-tokens"),"?mod=".MODULE."&scr=settings_edit&tab=tokens");
  // build settings form
- $form=new cForm("?mod=".MODULE."&scr=submit&act=settings_save&tab=".TAB,"POST",null,"settings_edit");
+ $form=new strForm("?mod=".MODULE."&scr=submit&act=settings_save&tab=".TAB,"POST",null,"settings_edit");
  /**
   * Generals
   */
@@ -48,14 +48,14 @@
  $form->addControl("reset",api_text("form-fc-reset"));
  $form->addControl("button",api_text("form-fc-cancel"),"?mod=".MODULE."&scr=dashboard");
  // build grid object
- $grid=new cGrid();
+ $grid=new strGrid();
  $grid->addRow();
  $grid->addCol($form->render(),"col-xs-12");
- // add content to html
- $html->addContent($tabs->render(false));
- $html->addContent($grid->render());
- // renderize html page
- $html->render();
+ // add content to application
+ $app->addContent($tabs->render(false));
+ $app->addContent($grid->render());
+ // renderize application
+ $app->render();
  // debug
  api_dump($settings_obj,"settings");
 ?>

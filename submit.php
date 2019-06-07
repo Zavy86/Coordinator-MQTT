@@ -25,7 +25,7 @@ switch(ACTION){
  */
 function settings_save(){
  // debug
- api_dump($_REQUEST);
+ api_dump($_REQUEST,"_REQUEST");
  // check authorizations
  api_checkAuthorization("mqtt-manage","dashboard");
  // acquire variables
@@ -49,7 +49,7 @@ function settings_save(){
   // buil setting query
   $query="INSERT INTO `mqtt__settings` (`setting`,`value`) VALUES ('".$setting."','".$value."') ON DUPLICATE KEY UPDATE `setting`='".$setting."',`value`='".$value."'";
   // execute setting query
-  $GLOBALS['database']->queryExecute($query,$GLOBALS['debug']);
+  $GLOBALS['database']->queryExecute($query);
   api_dump($query);
  }
  // redirect
@@ -62,7 +62,7 @@ function settings_save(){
  */
 function message_send(){
  // debug
- api_dump($_REQUEST);
+ api_dump($_REQUEST,"_REQUEST");
  // check authorizations
  api_checkAuthorization("mqtt-send","dashboard");
  // acquire variables

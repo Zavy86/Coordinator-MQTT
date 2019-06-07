@@ -4,12 +4,12 @@
  *
  * @package Coordinator\Modules\MQTT
  * @author  Manuel Zavatta <manuel.zavatta@gmail.com>
- * @link    http://www.zavynet.org
+ * @link    http://www.coordinator.it
  */
- // build html object
- $html=new cHTML($module_name);
+ // build application
+ $app=new strApplication();
  // build nav object
- $nav=new cNav("nav-tabs");
+ $nav=new strNav("nav-tabs");
  $nav->setTitle(api_text(MODULE));
 // dashboard
  $nav->addItem(api_icon("fa-th-large",null,"hidden-link"),"?mod=".MODULE."&scr=dashboard");
@@ -27,5 +27,5 @@
   $nav->addItem(api_text("nav-settings-edit"),"?mod=".MODULE."&scr=settings_edit");
  }
  // add nav to html
- $html->addContent($nav->render(false));
+ $app->addContent($nav->render(false));
 ?>
