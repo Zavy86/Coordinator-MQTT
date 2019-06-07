@@ -4,12 +4,12 @@
  *
  * @package Coordinator\Modules\MQTT
  * @author  Manuel Zavatta <manuel.zavatta@gmail.com>
- * @link    http://www.zavynet.org
+ * @link    http://www.coordinator.it
  */
 
 // include classes
-require_once(ROOT."modules/mqtt/classes/cMqttSettings.class.php");
-require_once(ROOT."modules/mqtt/classes/cMqttLog.class.php");
+require_once(DIR."modules/mqtt/classes/cMqttSettings.class.php");
+require_once(DIR."modules/mqtt/classes/cMqttLog.class.php");
 
 /**
  * MQTT - Log
