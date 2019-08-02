@@ -22,7 +22,7 @@
  $tabs->addItem(api_text("settings_edit-tab-generals"),"?mod=".MODULE."&scr=settings_edit&tab=generals");
  $tabs->addItem(api_text("settings_edit-tab-tokens"),"?mod=".MODULE."&scr=settings_edit&tab=tokens");
  // build settings form
- $form=new strForm("?mod=".MODULE."&scr=submit&act=settings_save&tab=".TAB,"POST",null,"settings_edit");
+ $form=new strForm("?mod=".MODULE."&scr=submit&act=settings_save&tab=".TAB,"POST",null,null,"settings_edit");
  /**
   * Generals
   */

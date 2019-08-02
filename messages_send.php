@@ -12,7 +12,7 @@
  // set application title
  $app->setTitle(api_text("messages_send"));
  // build messages form
- $form=new strForm("?mod=".MODULE."&scr=submit&act=message_send&tab=".TAB,"POST",null,"messages_send");
+ $form=new strForm("?mod=".MODULE."&scr=submit&act=message_send&tab=".TAB,"POST",null,null,"messages_send");
  $form->addField("text","topic",api_text("messages_send-ff-topic"),"/test",api_text("messages_send-ff-topic-placeholder"),null,null,null,"required");
  $form->addField("text","payload",api_text("messages_send-ff-payload"),null,api_text("messages_send-ff-payload-placeholder"));
  $form->addField("checkbox","retain");
