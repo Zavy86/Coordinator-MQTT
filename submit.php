@@ -75,7 +75,7 @@ function message_send(){
  if($return){api_alerts_add(api_text("mqtt_alert-messageSend"),"success");}
  else{api_alerts_add(api_text("mqtt_alert-messageError"),"success");}
  // redirect
- api_redirect("?mod=".MODULE."&scr=messages_list");
+ api_redirect("?mod=".MODULE."&scr=logs_list");
 }
 
 ?>

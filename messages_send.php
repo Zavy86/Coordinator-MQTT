@@ -18,7 +18,7 @@
  $form->addField("checkbox","retain");
  $form->addFieldOption(1,api_text("messages_send-fo-retain"));
  // form controls
- $form->addControl("submit",api_text("form-fc-submit"));
+ $form->addControl("submit",api_text("form-fc-save"));
  $form->addControl("reset",api_text("form-fc-reset"));
  $form->addControl("button",api_text("form-fc-cancel"),"?mod=".MODULE."&scr=dashboard");
  // build grid object

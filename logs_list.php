@@ -33,7 +33,7 @@
  // cycle all logs
  foreach($logs_array as $log_obj){
   // make row class
-  if($log_obj->id==$_REQUEST['idLog']){$tr_class="info";}else{$tr_class=null;}
+  if($log_obj->id==$_REQUEST['idLog']){$tr_class="currentrow";}else{$tr_class=null;}
   // make log row
   $table->addRow($tr_class);
   $table->addRowField(api_link("?mod=".MODULE."&scr=logs_list&act=log_view&idLog=".$log_obj->id,api_icon("fa-search",null,"hidden-link"),api_text("logs_list-td-view")));
